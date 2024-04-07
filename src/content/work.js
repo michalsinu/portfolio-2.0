@@ -65,7 +65,7 @@ function Work() {
             <div className='projectInfo'>
               <a href="https://cartelbarber.cz/" target='_blank'>Cartel Barbershop</a> <i class="fa-solid fa-link"></i><br /><br />
               <p>
-                Společnost Cartel Barbershop představuje jedinečný barbershop, který se specializuje na moderní a vkusné účesy od roku 2023. <div className='more'>Více...</div>
+                Společnost Cartel Barbershop představuje jedinečný barbershop, který se specializuje na moderní a vkusné účesy od roku 2023.
               </p>
             </div>
           </div>
@@ -82,7 +82,7 @@ function Work() {
             <div className='projectInfo'>
               <a href="https://www.workjs.cz/" target='_blank'>WorkJS s.r.o. <i class="fa-solid fa-link"></i></a><br /><br />
               <p>
-                Zprostředkovatel zaměstnání má za úkol usnadnit spojení mezi zaměstnavateli a uchazeči o práci a pomoci nalezení vhodných pracovních příležitostí pro jednotlivce. <div className='more'>Více...</div>
+                Zprostředkovatel zaměstnání má za úkol usnadnit spojení mezi zaměstnavateli a uchazeči o práci a pomoci nalezení vhodných pracovních příležitostí pro jednotlivce.
               </p>
             </div>
           </div>

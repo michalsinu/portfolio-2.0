@@ -6,6 +6,8 @@ import './App.css';
 import Intro from './content/intro.js';
 import AboutMe from './content/aboutme.js';
 import Work from './content/work.js';
+import Services from './content/services.js';
+import Finance from './content/finance.js';
 
 import Logo from './assets/Logo.png';
 
@@ -72,6 +74,13 @@ class App extends Component {
       image.style.transition = `all ${newDuration}s ease-in-out`;
     };
 
+    moveImage('.Laptop');
+    moveImage('.Briefcase');
+    moveImage('.Coffee');
+    moveImage('.Water_Bottle');
+    moveImage('.Notebook');
+    moveImage('.iPhone');
+
     setInterval(() => {
       moveImage('.Laptop');
       moveImage('.Briefcase');
@@ -94,46 +103,11 @@ class App extends Component {
     });
   }
 
-  contentSwitcher = () => {
-    const { scrollPercentage } = this.state;
-
-    console.log('Scroll Percentage:', scrollPercentage);
-
-    if (scrollPercentage >= 0 && scrollPercentage < 35.65) {
-      return (
-        <div className='intro'>
-          <Fade>
-            <Intro />
-          </Fade>
-        </div>
-      );
-    } else if (scrollPercentage >= 35.65 && scrollPercentage < 68.58) {
-      return (
-        <div className='aboutme'>
-          <Fade>
-            <AboutMe />
-          </Fade>
-        </div>
-      );
-    } else if (scrollPercentage >= 68.58) {
-      return (
-        <div className='work'>
-          <Fade>
-            <Work />
-            <AboutMe />
-          </Fade>
-        </div>
-      );
-    }
-
-    return null; // Return null if no content should be displayed
-  }
-
   navigationLinks = () => {
     const { sections } = this.state;
 
     return (
-      <ul className='navigationLinks'>
+      <ul>
       {sections.map((section, index) => {
         return(
           <li>
@@ -154,26 +128,25 @@ class App extends Component {
         <img className='Water_Bottle floatingIcons' src={Water_Bottle} />
         <img className='iPhone floatingIcons' src={iPhone} />
         <img className='Notebook floatingIcons' src={Notebook} />
-        <img src={Logo} className='Logo' />
-        <div className="left-fixed">
-          {this.renderNavigationDots()}
-        </div>
-        <div className="right">
-          <div className='container-fluid full-height'>
-            <div className='row'>
-              <div className='col navigationLinks'>
-                {this.navigationLinks()}
-              </div>
+
+        <div className='container-fluid header px-0'>
+          <div className='row'>
+            <div className='col-sm-6'>
+              <img src={Logo} className='Logo' />
             </div>
-            <div className='row'>
-              <div className='col-sm-12'>
-                <Intro />
-                <AboutMe />
-                <Work />
-              </div>
+
+            <div className='col-sm-6 pt-5'>
+              <span className='navigationLinks'>
+                {this.navigationLinks()}
+              </span>
             </div>
           </div>
         </div>
+        <Intro />
+        <AboutMe />
+        <Work />
+        <Services />
+        <Finance />
       </div>
     );
   }
