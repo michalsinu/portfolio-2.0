@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.e53e4387.css",
-    "main.js": "/static/js/main.36944594.js",
-    "static/js/453.195f25b5.chunk.js": "/static/js/453.195f25b5.chunk.js",
-    "static/media/cartel.png": "/static/media/cartel.549f89c705dbc2133e08.png",
-    "static/media/workjs.png": "/static/media/workjs.8726bdca245e299cb7b9.png",
-    "static/media/designer.jpeg": "/static/media/designer.bbf389c13299682eea3e.jpeg",
-    "static/media/Face.png": "/static/media/Face.547108103c9bd0845153.png",
-    "static/media/github.png": "/static/media/github.b558e5f8505dd71d2946.png",
-    "static/media/Logo.png": "/static/media/Logo.4fba01d93de417df589e.png",
-    "static/media/iPhone.png": "/static/media/iPhone.d87c3841c7aebfa29052.png",
-    "static/media/Coffee.png": "/static/media/Coffee.223c686d51fe0cb09ce4.png",
-    "static/media/Laptop.png": "/static/media/Laptop.faf2169ded03d91f4254.png",
-    "static/media/Briefcase.png": "/static/media/Briefcase.fdd4009116f6664e1eab.png",
-    "static/media/Notebook.png": "/static/media/Notebook.eb9ac0793de0df6a15a4.png",
-    "static/media/Water_Bottle.png": "/static/media/Water_Bottle.71be57e4641d0474b003.png",
-    "index.html": "/index.html",
-    "main.e53e4387.css.map": "/static/css/main.e53e4387.css.map",
-    "main.36944594.js.map": "/static/js/main.36944594.js.map",
-    "453.195f25b5.chunk.js.map": "/static/js/453.195f25b5.chunk.js.map"
+    "main.css": "./static/css/main.04ad4489.css",
+    "main.js": "./static/js/main.91188261.js",
+    "static/js/453.195f25b5.chunk.js": "./static/js/453.195f25b5.chunk.js",
+    "static/media/cartel.png": "./static/media/cartel.549f89c705dbc2133e08.png",
+    "static/media/workjs.png": "./static/media/workjs.8726bdca245e299cb7b9.png",
+    "static/media/designer.jpeg": "./static/media/designer.bbf389c13299682eea3e.jpeg",
+    "static/media/finance.png": "./static/media/finance.d81b1373597facc21594.png",
+    "static/media/Face.png": "./static/media/Face.547108103c9bd0845153.png",
+    "static/media/github.png": "./static/media/github.b558e5f8505dd71d2946.png",
+    "static/media/Logo.png": "./static/media/Logo.4fba01d93de417df589e.png",
+    "static/media/iPhone.png": "./static/media/iPhone.d87c3841c7aebfa29052.png",
+    "static/media/Coffee.png": "./static/media/Coffee.223c686d51fe0cb09ce4.png",
+    "static/media/Laptop.png": "./static/media/Laptop.faf2169ded03d91f4254.png",
+    "static/media/Briefcase.png": "./static/media/Briefcase.fdd4009116f6664e1eab.png",
+    "static/media/Notebook.png": "./static/media/Notebook.eb9ac0793de0df6a15a4.png",
+    "static/media/Water_Bottle.png": "./static/media/Water_Bottle.71be57e4641d0474b003.png",
+    "index.html": "./index.html",
+    "main.04ad4489.css.map": "./static/css/main.04ad4489.css.map",
+    "main.91188261.js.map": "./static/js/main.91188261.js.map",
+    "453.195f25b5.chunk.js.map": "./static/js/453.195f25b5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e53e4387.css",
-    "static/js/main.36944594.js"
+    "static/css/main.04ad4489.css",
+    "static/js/main.91188261.js"
   ]
 }
