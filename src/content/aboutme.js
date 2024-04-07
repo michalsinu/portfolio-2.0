@@ -15,7 +15,7 @@ class AboutMe extends Component {
 
   render() {
     return (
-      <div className='aboutMeContainer'>
+      <div className='container-fluid aboutMeContainer'>
         <div className="marquee-container">
           <Marquee className='scroller' speed='200' direction='right'>
             MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU
@@ -31,7 +31,7 @@ class AboutMe extends Component {
             <div className='aboutMeTypography'>
               <h1>Něco</h1>
               <h1>Malého</h1>
-              <h1>O mě. 🤙🏽</h1>
+              <h1>O MNĚ. 🤙🏽</h1>
             </div>
             <p>
               Jsem Michal Sinu, vývojář webových rozhraní, který se neustále snaží překonávat očekávání. Mým cílem je vytvářet nejen krásné a esteticky příjemné webové stránky, ale také ty, které poskytují uživatelům maximální komfort a snadnou použitelnost. S mým pečlivým okem pro detail se věnuji každému aspektu designu a vývoje, abych zajistil, že každý prvek na stránce má své místo a přispívá k celkovému uživatelskému zážitku.<br />
@@ -46,7 +46,7 @@ class AboutMe extends Component {
           </div>
         <div className="marquee-container">
           <Marquee className='scroller scrollerInverted' speed='200'>
-            O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ O MĚ
+            O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ O MNĚ
           </Marquee>
         </div>
       </div>

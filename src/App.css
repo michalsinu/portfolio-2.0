@@ -1,30 +1,13 @@
-.App {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 100vh;
-  position: relative;
-}
-
-.left-fixed {
-  margin-top: 15%;
-  position: fixed;
-  width: 5vw; /* Adjust the width as needed */
-  height: 100%;
-  background: #fff; /* Your desired background */
-  display: none;
-}
-
-.right {
-  text-align: center;
+.header {
+  background-color: #ffffff2d;
+  z-index: 500;
+  position: sticky;
   top: 0;
-  right: 0;
-  width: 90vw; /* Adjust the width according to the left column */
-  height: 100%;
-  background: #fff; /* Your desired background */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to the start of the flex container */
+}
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 .dot {
@@ -42,11 +25,8 @@
 }
 
 .Logo {
-  z-index: 1000;
-  width: 4vw;
   margin-top: 2%;
-  margin-left: 2%;
-  position: fixed;
+  margin-left: 5%;
 }
 
 .Face {
@@ -60,7 +40,7 @@
 .floatingIcons {
   width: auto;
   height: 7%;
-  z-index: 500;
+  z-index: 1000;
   position: absolute;
   transition: all 1s ease-in-out; /* Default duration, will be overridden by JS */
 }
@@ -106,6 +86,14 @@
     width: 15vw; /* Increase the relative size on smaller screens */
   }
 
+  .navigationLinks {
+    display: none;
+  }
+
+  .App {
+    overflow-x: hidden;
+  }
+
   .floatingIcons {
     height: 7%;
   }
@@ -121,8 +109,13 @@
 }
 
 .intro {
-  align-items: center;
-  margin-left: 10%;
+  text-align: center;
+  height: 91vh;
+  bottom: 0;
+}
+
+.introContent {
+  margin-top: 25vh;
 }
 
 .fixed {
@@ -130,7 +123,7 @@
 }
 
 .github {
-  width: 64px;
+  width: 32px;
   height: auto;
 }
 
@@ -143,11 +136,8 @@
 }
 
 .navigationLinks {
-  padding-top: 5vh;
-  padding-left: 80vw;
-  text-align: right;
-  position: fixed;
-  z-index: 600;
+  text-align: center;
+  margin-top: 5%;
 }
 
 .activeLink {
@@ -175,10 +165,7 @@
 }
 
 .contentDown {
-  padding-top: 20vh;
-}
-
-.marquee-container {
+  padding-top: 30vh;
 }
 
 .rotateLeft {
@@ -265,6 +252,7 @@
   margin: 4%;
   background: #333;
   background-size: 100% auto;
+  background-repeat: ;
 }
 
 @keyframes zoomIn {
@@ -406,9 +394,6 @@
 }
 
 .aboutMeContainer {
-  margin-top: 31.5%;
-  width: auto;
-  margin-left: 5%;
   -webkit-box-shadow:
     inset 0px -14px 14px -10px rgba(0,0,0,0.05), /* Top shadow */
     inset 0px 14px 14px -10px rgba(0,0,0,0.05);  /* Bottom shadow */
@@ -418,4 +403,85 @@
   box-shadow:
       inset 0px -14px 14px -10px rgba(0,0,0,0.05), /* Top shadow */
       inset 0px 14px 14px -10px rgba(0,0,0,0.05);  /* Bottom shadow */
+}
+
+.skill {
+  background-color: #252525;
+  color: #FFFFFF;
+  margin-right: 5px;
+}
+
+.servicesContainer {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.servicesTypography {
+  text-align: right;
+  padding-right: 15%;
+}
+
+.servicesTypography h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 90%;
+  font-size: 6em;
+}
+
+.servicesTypography h3 {
+  color: #FFFFFF;
+  font-size: 1.5em;
+}
+
+.servicesTypography a {
+  text-decoration: none;
+}
+
+.servicesTypography a:hover {
+  text-decoration: underline #FFF;
+}
+
+.arrow-right {
+  width: auto;
+  height: 48px;
+}
+
+.serviceHeading , .serviceText {
+  text-align: left;
+}
+
+.serviceHeading {
+  font-size: 2.5rem;
+}
+
+.serviceText {
+  font-size: 0.95rem;
+}
+
+.financeContainer {
+  margin-top: 10%;
+}
+
+.financeHeading {
+  font-weight: bold;
+}
+
+.financeSubHeading {
+  font-size: 1.3rem;
+  color: #6d6d6d;
+}
+
+.financeTextContainer {
+  text-align: left;
+  padding-left: 5%;
+}
+
+.financeTextContainer a {
+  color: #fa4d41;
+  text-decoration: none;
+  border-bottom: 2px dashed #fa4d41;
+}
+
+.financeTextContainer a:hover {
+  font-weight: bold;
 }
