@@ -1,7 +1,7 @@
 .header {
   background-color: #ffffff2d;
-  z-index: 500;
-  position: sticky;
+  z-index: 1150;
+  position: fixed;
   top: 0;
 }
 
@@ -29,14 +29,6 @@
   margin-left: 5%;
 }
 
-.Face {
-  width: 20vw;
-  height: auto;
-  position: absolute;
-  bottom: 0;
-  left: 40%;
-}
-
 .floatingIcons {
   width: auto;
   height: 7%;
@@ -45,32 +37,32 @@
   transition: all 1s ease-in-out; /* Default duration, will be overridden by JS */
 }
 
-.Laptop {
+#Laptop {
   top: 50%;
   left: 30%;
 }
 
-.Briefcase {
+#Briefcase {
   top: 20%;
   left: 35%;
 }
 
-.Coffee {
+#Coffee {
   top: 20%;
   left: 70%;
 }
 
-.Notebook {
+#Notebook {
   top: 50%;
   left: 70%;
 }
 
-.iPhone {
+#iPhone {
   top: 15%;
   left: 52%;
 }
 
-.Water_Bottle {
+#Water_Bottle {
   top: 55%;
   left: 52%;
 }
@@ -81,28 +73,6 @@
   border-radius: 2%;
 }
 
-@media (max-width: 600px) {
-  .Logo {
-    width: 15vw; /* Increase the relative size on smaller screens */
-  }
-
-  .navigationLinks {
-    display: none;
-  }
-
-  .App {
-    overflow-x: hidden;
-  }
-
-  .floatingIcons {
-    height: 7%;
-  }
-
-  .stockImage {width: 50vw;}
-
-  .Face {width: 50vw;}
-}
-
 .paragraph {
   max-width: 550px; /* Adjust this value as needed */
   margin-top: 1%;
@@ -110,12 +80,24 @@
 
 .intro {
   text-align: center;
-  height: 91vh;
-  bottom: 0;
+  height: 95vh;
+  position: relative;
 }
 
 .introContent {
-  margin-top: 25vh;
+  top: 20%;
+  position: relative;
+}
+
+.introContent a {
+  color: #418bfa;
+}
+
+.introContent a:hover { scale: 2; }
+
+.Face {
+  position: absolute;
+  bottom: 0;
 }
 
 .fixed {
@@ -127,10 +109,6 @@
   height: auto;
 }
 
-.introCounter {
-  color: #6e6e6e;
-}
-
 .full-height {
   height: 100vw;
 }
@@ -138,6 +116,7 @@
 .navigationLinks {
   text-align: center;
   margin-top: 5%;
+  text-transform:uppercase;
 }
 
 .activeLink {
@@ -152,7 +131,7 @@
 
 .navigationLinks li {
   display: inline-block;
-  margin-right: 10px; /* Adjust spacing between items as needed */
+  margin-right: 20px; /* Adjust spacing between items as needed */
 }
 
 .navigationLinks a {
@@ -162,6 +141,7 @@
 
 .navigationLinks a:hover {
   font-size: large;
+  font-weight: bold;
 }
 
 .contentDown {
@@ -426,6 +406,7 @@
   text-transform: uppercase;
   line-height: 90%;
   font-size: 6em;
+  color: #FFFFFF;
 }
 
 .servicesTypography h3 {
@@ -484,4 +465,74 @@
 
 .financeTextContainer a:hover {
   font-weight: bold;
+}
+
+.contactTypography {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.contactContainer {
+  position: relative;
+  background-color: rgb(51, 138, 189);
+  z-index: 100;
+  height: 100%;
+  overflow: hidden;
+}
+
+.contactContainer::before {
+  position: absolute;
+  content: '';
+  width: 200%;
+  height: 400%;
+  background-color: #ffffff;
+  top: -350%;
+  left: -50%;
+  border-radius: 40%;
+  animation: wave 12s infinite linear;
+  animation-delay: 0.5s;
+  z-index: -100;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.contactIcon {
+  width: 50%;
+  height: auto;
+}
+
+#paperPlane1, #paperPlane2, #paperPlane3, #paperPlane4, #paperPlane5 {
+  z-index: -100;
+}
+
+.submit-contact {
+  background: linear-gradient(45deg, #1265ff, #1d6bfd, #80ccff);
+  color: #FFF;
+  width: 100%;
+}
+
+footer {
+  background-color: #252525;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: #FFFFFF;
+}
+
+.copyright {
+  border-top: 1px solid #474747;
+  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
+import moveImages from './moveImages.js';
+
 import { Fade } from "react-awesome-reveal";
 
 import './App.css';
+import './responsive.css';
 
 import Intro from './content/intro.js';
 import AboutMe from './content/aboutme.js';
 import Work from './content/work.js';
 import Services from './content/services.js';
 import Finance from './content/finance.js';
+import Contact from './content/contact.js';
+import Footer from './content/footer.js';
+import MobileMenu from './content/mobileMenu.js';
 
 import Logo from './assets/Logo.png';
 
@@ -17,90 +24,26 @@ import Coffee from './assets/Coffee.png';
 import Water_Bottle from './assets/Water_Bottle.png';
 import Notebook from './assets/Notebook.png';
 import iPhone from './assets/iPhone.png';
+import mobileMenu from './content/mobileMenu.js';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      scrollPercentage: 0,
       sections: [
-        { name: 'Úvod', ref: React.createRef() },
-        { name: 'O mně', ref: React.createRef() },
-        { name: 'Moje práce', ref: React.createRef() }
+        { name: 'Úvod', href: '' },
+        { name: 'O mně', href: 'omne' },
+        { name: 'Moje práce', href: 'portfolio' },
+        { name: 'Moje služby', href: 'sluzby' },
+        { name: 'Cena', href: 'cena' },
+        { name: 'Kontakt', href: 'kontakt' },
       ]
     };
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-    this.moveImages();
-  }
-
-  handleScroll = () => {
-    const scrollTop = document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight;
-    const clientHeight = document.documentElement.clientHeight;
-
-    const scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
-
-    this.setState({ scrollPercentage: scrolled.toFixed(2) });
-    console.log(this.state.scrollPercentage);
-  }
-
-  moveImages = () => {
-    const moveImage = (imageSelector) => {
-      const image = document.querySelector(imageSelector);
-      if (image.complete) {
-        initMoveImage(image);
-      } else {
-        image.onload = () => initMoveImage(image);
-      }
-    };
-
-    const initMoveImage = (image) => {
-      const maxX = window.innerWidth - image.clientWidth;
-      const maxY = window.innerHeight - image.clientHeight;
-
-      // Ensure initial position is set
-      image.style.left = `${image.offsetLeft}px`;
-      image.style.top = `${image.offsetTop}px`;
-
-      const newX = Math.random() * maxX;
-      const newY = Math.random() * maxY;
-      const newDuration = Math.random() * 3 + 2; // Duration between 2 to 5 seconds
-
-      image.style.left = `${newX}px`;
-      image.style.top = `${newY}px`;
-      image.style.transition = `all ${newDuration}s ease-in-out`;
-    };
-
-    moveImage('.Laptop');
-    moveImage('.Briefcase');
-    moveImage('.Coffee');
-    moveImage('.Water_Bottle');
-    moveImage('.Notebook');
-    moveImage('.iPhone');
-
-    setInterval(() => {
-      moveImage('.Laptop');
-      moveImage('.Briefcase');
-      moveImage('.Coffee');
-      moveImage('.Water_Bottle');
-      moveImage('.Notebook');
-      moveImage('.iPhone');
-    }, 5000); // Change positions every 5 seconds
-  }
-
-  renderNavigationDots = () => {
-    const { sections, scrollPercentage } = this.state;
-    return sections.map((section, index) => {
-      const isActive = scrollPercentage >= (100 / sections.length) * index &&  scrollPercentage < (100 / sections.length) * (index + 1);
-      section.isActive = isActive;
-
-      return (
-        <div className={`dot ${isActive ? 'active' : ''}`} />
-      );
-    });
+    const moveImagesInstance = new moveImages();
+    moveImagesInstance.init();
   }
 
   navigationLinks = () => {
@@ -111,7 +54,7 @@ class App extends Component {
       {sections.map((section, index) => {
         return(
           <li>
-            <a href="#" className={section.isActive ? 'activeLink' : ''}>{section.name}</a>
+            <a href={"/#" + section.href}>{section.name}</a>
           </li>
         );
       })}
@@ -119,34 +62,50 @@ class App extends Component {
     )
   }
 
+  MobileMenuToggle = () => {
+    $('.mobile-menu').toggleClass('mobile-menu-active');
+    $('.line').toggleClass('line-active');
+  }
+
   render() {
+    const { sections } = this.state;
+
     return (
       <div className="App">
-        <img className='Laptop floatingIcons' src={Laptop} />
-        <img className='Briefcase floatingIcons' src={Briefcase} />
-        <img className='Coffee floatingIcons' src={Coffee} />
-        <img className='Water_Bottle floatingIcons' src={Water_Bottle} />
-        <img className='iPhone floatingIcons' src={iPhone} />
-        <img className='Notebook floatingIcons' src={Notebook} />
+        <MobileMenu sections={sections} />
+        <img id='Laptop' className='floatingIcons' src={Laptop} />
+        <img id='Briefcase' className='floatingIcons' src={Briefcase} />
+        <img id='Coffee' className='floatingIcons' src={Coffee} />
+        <img id='Water_Bottle' className='floatingIcons' src={Water_Bottle} />
+        <img id='iPhone' className='floatingIcons' src={iPhone} />
+        <img id='Notebook' className='floatingIcons' src={Notebook} />
 
         <div className='container-fluid header px-0'>
           <div className='row'>
-            <div className='col-sm-6'>
+            <div className='col-6'>
               <img src={Logo} className='Logo' />
             </div>
 
-            <div className='col-sm-6 pt-5'>
+            <div className='col-6 pt-5'>
               <span className='navigationLinks'>
                 {this.navigationLinks()}
               </span>
+              <div class="hamburger-menu" onClick={this.MobileMenuToggle}>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
             </div>
           </div>
         </div>
+
         <Intro />
         <AboutMe />
         <Work />
         <Services />
         <Finance />
+        <Contact />
+        <Footer/>
       </div>
     );
   }
