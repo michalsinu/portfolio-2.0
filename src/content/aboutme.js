@@ -5,7 +5,6 @@ import stockImage from '../assets/designer.jpeg';
 class AboutMe extends Component {
   constructor(props) {
     super(props);
-    this.aboutSection = React.createRef();
     this.state = {
       scroller: {
         speed: 5
@@ -15,7 +14,7 @@ class AboutMe extends Component {
 
   render() {
     return (
-      <div className='container-fluid aboutMeContainer'>
+      <div id="omne" className='container-fluid aboutMeContainer' data-aos="flip-left">
         <div className="marquee-container">
           <Marquee className='scroller' speed='200' direction='right'>
             MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU MICHAL SINU

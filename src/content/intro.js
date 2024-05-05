@@ -7,10 +7,10 @@ class Intro extends Component {
   render() {
     return (
     <React.Fragment>
-      <div className='intro'>
-        <div className='container-fluid'>
+      <div className='jumbotron jumbotron-fluid intro'>
+        <div className='container introContent mt-5'>
           <div className='row'>
-            <div className='col-12 introContent'>
+            <div className='col-12'>
               <h1 id="name">Michal Sinu</h1>
               <i>Full Stack Vývojář Webových Aplikací</i><br />
               <b>+420775020590 <a href="mailto:kontakt@michalsinu.cz">kontakt@michalsinu.cz</a></b> <a href="https://github.com/michalsinu" target='_blank'>
@@ -36,13 +36,8 @@ class Intro extends Component {
               <span className='badge skill'>Windows</span>
             </div>
           </div>
-
-          <div className='row'>
-            <div className='col-sm-12'>
-              <img src={Face} className='Face' />
-            </div>
-          </div>
         </div>
+        <img src={Face} className='Face' />
       </div>
 
 

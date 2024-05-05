@@ -1,0 +1,126 @@
+@media only screen and (max-width: 600px) {
+  .Logo {
+    width: 15vw;
+  }
+
+  .App {
+    overflow-x: hidden;
+  }
+
+  .floatingIcons {
+    height: 7%;
+  }
+
+  .header {
+    margin-top: 5%;
+    background-color: #ffffff00;
+  }
+
+  .navigationLinks { display: none; }
+
+  .hamburger-menu {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    margin-top: 5%;
+    margin-right: 5%;
+    position: absolute;
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+  }
+
+  .stockImage {width: 40vw;}
+
+  .intro {
+    height: 82vh;
+  }
+
+  .Face {width: 50%;}
+
+  .contactContainer::before {
+    height: 420%;
+    width: 700%;
+    left: -400%;
+  }
+
+  .aboutMeContent {
+    border-left: 0px solid #CCC;
+    margin-top: 10%;
+  }
+
+  .servicesTypography h1 {
+    font-size: 3.5em;
+  }
+
+  .servicesTypography h3 {
+    font-size: 1.5em;
+  }
+
+  .service {
+    margin-top: 20px;
+  }
+
+  #workTypography {
+    padding-top: 15%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1300px) {
+  .Face {
+    width: 30%;
+  }
+
+  .introContent {
+   top: 0;
+  }
+}
+
+.mobile-menu {
+  position: fixed; /* Fixes the menu position on the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fd251d; /* Semi-transparent black background */
+  z-index: 1100; /* Ensures menu covers the entire website */
+  overflow: hidden !important;
+  text-align: center;
+  transform: translateX(-100%);
+  padding-top: 20vh;
+}
+
+.mobile-menu-active {
+  transform: translateX(0) !important; /* Move the menu to the visible position */
+}
+
+.line-active {
+  background-color: #FFFFFF !important;
+}
+
+.mobile-menu a {
+  color: #FFFFFF;
+  font-size: 40pt;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.mobile-menu a:hover {
+  font-weight: bold;
+}
+
+.mobile-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mobile-menu li {
+}

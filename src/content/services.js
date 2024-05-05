@@ -4,7 +4,7 @@ class Services extends Component {
   render() {
     return (
       <div id='servicesContainer'>
-        <div className='container-fluid servicesContainer mt-5 p-5 shadow' style={{border: '1px solid #F0F0F0', backgroundColor: '#fa4d41'}}>
+        <div id="sluzby" className='container-fluid servicesContainer mt-5 p-5 shadow' style={{border: '1px solid #F0F0F0', backgroundColor: '#fa4d41'}}>
           <div className='row text-center mt-5'>
             <div className='col-sm-6 text-white p-5'>
               <div className='row'>
@@ -62,7 +62,7 @@ class Services extends Component {
                   Vás.
                 </h1>
                 <br />
-                <a href='#'>
+                <a href='/#kontakt'>
                   <h3>Začít objednávku <img className='img-fluid arrow-right' src='data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTI5LjA4IDE2aC0yNk0yOS4wOCAxNmwtNCA1TTI5LjA4IDE2bC00LTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjJweCIgY2xhc3M9InN0cm9rZS0wMDAwMDAiPjwvcGF0aD48L3N2Zz4=' /></h3>
                 </a>
               </div>

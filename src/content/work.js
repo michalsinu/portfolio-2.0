@@ -43,7 +43,7 @@ function Work() {
   const cartelPage = { backgroundImage: `url(${cartel})` };
 
   return (
-    <div className="container-fluid">
+    <div id="portfolio" className="container-fluid">
       <div className='row'>
         <div className="col-md-12">
           <div id="workTypography">
