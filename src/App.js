@@ -54,7 +54,7 @@ class App extends Component {
       {sections.map((section, index) => {
         return(
           <li>
-            <a href={"/#" + section.href}>{section.name}</a>
+            <a href={"#" + section.href}>{section.name}</a>
           </li>
         );
       })}
